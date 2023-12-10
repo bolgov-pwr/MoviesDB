@@ -27,7 +27,7 @@ final class MovieListViewModel: MovieListViewModelProtocol {
     }
     
     private var fetchedMovies: [Movie] = []
-    private var isOnline: Bool = true
+    private(set) var isOnline: Bool = true
     
     private let moviesRepo: MoviesRepositoryProtocol
     

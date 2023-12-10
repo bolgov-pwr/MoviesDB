@@ -32,3 +32,9 @@ struct Movie: Decodable {
         case voteAverage = "vote_average"
     }
 }
+
+extension Movie: Equatable {
+    static func ==(lhs: Movie, rhs: Movie) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

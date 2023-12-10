@@ -37,3 +37,9 @@ final class MoviesListCellViewModel: MoviesListCellViewModelProtocol {
         }
     }
 }
+
+extension MoviesListCellViewModel: Equatable {
+    static func ==(lhs: MoviesListCellViewModel, rhs: MoviesListCellViewModel) -> Bool {
+        return lhs.movie == rhs.movie
+    }
+}
