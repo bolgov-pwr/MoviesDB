@@ -14,7 +14,7 @@ final class MoviesNetworkManager: NetworkManagerProtocol {
     }
 	
 	private let router: Router<MoviesEndPoint>
-	
+    
     func topMoviews(completion: @escaping (Result<MoviesResponse, Error>) -> Void) {
         router.request(.getPopularMovies) { [weak self] data, response, error in
             guard let sSelf = self else { return }

@@ -47,11 +47,6 @@ extension MoviesEndPoint {
 	var headers: HTTPHeaders? {
         let accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZTkxYjVhNGIzZWY0ZTA4OWJjODc0YTE1NGM2ZTVhNSIsInN1YiI6IjY1NzRlNTZjNGJmYTU0MDBjNDA5MTBhMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.e7FF5uylKk6plrDx78QJXuCa52sYEuI2mwRDehkSqhg"
         
-		switch self {
-		case .getPopularMovies:
-            return ["Authorization" : "Bearer \(accessToken)", "Content-Type" : "application/json"]
-        case .searchMovies(let query):
-            return ["Authorization" : "Bearer \(accessToken)", "Content-Type" : "application/json", "query": query]
-		}
+        return ["Authorization" : "Bearer \(accessToken)", "Content-Type" : "application/json"]
 	}
 }

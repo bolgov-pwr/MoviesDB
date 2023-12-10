@@ -43,7 +43,7 @@ final class MovieDetailsViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         tableView.register(UINib(nibName: MovieDetailCell.reuseId, bundle: nil), forCellReuseIdentifier: MovieDetailCell.reuseId)
     }
